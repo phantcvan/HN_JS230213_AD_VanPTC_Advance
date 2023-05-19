@@ -7,35 +7,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/index.css">
+
 </head>
 
 <body>
     <div class="container">
-        <header>
-            <h1>Score keeper</h1>
-        </header>
-        <section class="keepers">
-            <div class="wrap" id="keepers">
-                <input type="text" id="player1"  class="input-player"/>
-                <input type="text" id="player2"  class="input-player"/>
-                <input type="text" id="player3" class="input-player" />
-                <input type="text" id="player4"  class="input-player"/>>
-            </div>
-            <div class="validate" id="message">
-                <span>INPUT BLANK</span>
-            </div>
-            <button onclick="handleAddPlayer()" class="btn" id="create" >Create Game</button>
+        <table  id="myTable">
+            <thead>
+              <tr id="name">
+                <th>#</th>
+                <th id="player1">Player 1</th>
+                <th id="player2">Player 2</th>
+                <th id="player3">Player 3</th>
+                <th id="player4">Player 4</th>
+              </tr>
+            </thead>
+            <tbody id="score-body">
+              <tr class="sum" id="sumScore">
+                <td>Sum of scores</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tbody id="round-1">
+                  <tr >
+                  </tr>
+              </tbody>
+            </tbody>
+          </table>
 
-    </section>
-    </div>
+      <button class="btn">Add round</button>
 
+    <script src="/js/round.js"></script>
 
-    <script src="/js/index.js">
-
-
-
-
-    </script>
 </body>
 
 </html>

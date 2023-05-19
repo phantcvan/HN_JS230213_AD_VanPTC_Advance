@@ -2,8 +2,9 @@ const express = require("express");
 const server = express();
 const router = express.Router()
 const fs = require("fs");
-const bodyParser = require("body-parser")
-const roundsRoutes = require("./routes/rounds.routes")
+const bodyParser = require("body-parser");
+const roundRoutes = require("./routes/rounds.routes");
+const playersRoutes = require("./routes/players.routes");
 server.use(express.static('public'));
 server.use(bodyParser.urlencoded({ extended: true }))
 server.use(bodyParser.json())
@@ -17,14 +18,8 @@ server.get("/", (req, res) => {
     res.sendFile(__dirname + "/public/round.html");
   });
   
-  //Import route Users
-  const playersRoutes = require("./routes/players.routes");
-  //Su dung route Users
   server.use("/api/v1/player", playersRoutes);
-  //Import route Rounds
-  const roundRoutes = require("./routes/rounds.routes");
-  //Su dung route Rounds
-  server.use("/api/v1/round", roundRoutes);
+  server.use("/api/v1/rounds", roundRoutes);
 
 
 

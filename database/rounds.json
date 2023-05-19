@@ -1,3 +1,11 @@
 [
-
+    {
+        "id": 1,
+        "roundId": 1,
+        "gameId": "1",
+        "score1": 1,
+        "score2": 2,
+        "score3": 3,
+        "score4": 4
+    }
 ]

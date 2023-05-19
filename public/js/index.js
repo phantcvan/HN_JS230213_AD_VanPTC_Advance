@@ -13,15 +13,15 @@ let player4 = document.getElementById("player4");
 
 [player1, player2, player3, player4].forEach((item) => {
   item.addEventListener("input", (event) => {
-    if (
-      !player1.value || !player2.value || !player3.value || !player4.value
-    ) {
+    if (!player1.value || !player2.value || !player3.value || !player4.value) {
       message.style.display = "block";
+      return;
     } else {
       message.style.display = "none";
     }
   });
 });
+
 function handleAddPlayer() {
   try {
     fetch("api/v1/player", {
