@@ -85,3 +85,9 @@ td {
     color:white;
     font-weight: 550;
 }
+.validate{
+    display:none;
+    color:red;
+    font-weight: 550;;
+
+}

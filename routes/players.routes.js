@@ -16,9 +16,20 @@ router.get("/", (req, res) => {
   }
 });
 
+// Middleware validate player name
+const validate =(req,res,next)=>{
+  let { player1, player2, player3, player4 } = req.body;
+if(!player1||!player2||!player3||player4) {
+  res.json({
+    message: "Input blank"
+})
+} else{
+  next()
+}
+}
 
-//Thêm game
-router.post("/", (req, res) => {
+//Thêm người chơi
+router.post("/", validate, (req, res) => {
   let { player1, player2, player3, player4 } = req.body;
 
   try {
