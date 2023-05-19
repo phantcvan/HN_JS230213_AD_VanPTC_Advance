@@ -24,9 +24,9 @@ router.post("/", (req, res) => {
   try {
     let players = JSON.parse(fs.readFileSync("./database/players.json"));
     let id = 1;
-    if(players.length>1) id=players[players.length-1].id+1;
+    if(players.length>0) id=players[players.length-1].id+1;
     let gameId = 1;
-    if(players.length>1) gameId=players[players.length-1].gameId+1;
+    if(players.length>0) gameId=players[players.length-1].gameId+1;
     
     let newPlayer = {
       id: id,

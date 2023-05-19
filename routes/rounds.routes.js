@@ -21,7 +21,7 @@ router.get("/:id", (req, res) => {
   console.log(id);
   try {
     let rounds = JSON.parse(fs.readFileSync("./database/rounds.json"));
-    const findGame = rounds.find((game,i) => game.gameId === +id);
+    const findGame = rounds.filter((game,i) => game.gameId === +id);
     console.log(findGame);
     res.json(findGame);
   } catch (error) {
@@ -43,10 +43,11 @@ router.post("/", (req, res) => {
 
     try {
       let rounds = JSON.parse(fs.readFileSync("./database/rounds.json"));
+      console.log("ROUND",rounds);
       let id=1;
       let roundId=1;
-      if (rounds.length>1) id=rounds[rounds.length-1].id+1;
-      if (rounds.length>1) roundId=rounds[rounds.length-1].roundId+1;
+      if (rounds.length>0) id=rounds[rounds.length-1].id+1;
+      if (rounds.length>0) roundId=rounds[rounds.length-1].roundId+1;
       let newRound = {
         id: id,
         roundId: roundId,

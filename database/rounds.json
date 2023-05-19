@@ -1,11 +1,1 @@
-[
-    {
-        "id": 1,
-        "roundId": 1,
-        "gameId": "1",
-        "score1": 1,
-        "score2": 2,
-        "score3": 3,
-        "score4": 4
-    }
-]
+[{"id":1,"roundId":1,"gameId":1,"score1":1,"score2":2,"score3":3,"score4":4},{"id":1,"roundId":1,"gameId":1,"score1":2,"score2":3,"score3":4,"score4":5},{"id":2,"roundId":2,"gameId":1,"score1":4,"score2":5,"score3":4,"score4":5},{"id":3,"roundId":3,"gameId":2,"score1":2,"score2":2,"score3":2,"score4":2},{"id":4,"roundId":4,"gameId":2,"score1":3,"score2":4,"score3":5,"score4":6},{"id":5,"roundId":5,"gameId":2,"score1":3,"score2":4,"score3":5,"score4":6},{"id":6,"roundId":6,"gameId":3,"score1":1,"score2":2,"score3":3,"score4":4},{"id":7,"roundId":7,"gameId":3,"score1":5,"score2":6,"score3":7,"score4":8},{"id":8,"roundId":8,"gameId":3,"score1":25,"score2":26,"score3":27,"score4":28},{"id":9,"roundId":9,"gameId":4,"score1":1,"score2":2,"score3":3,"score4":4},{"id":10,"roundId":10,"gameId":4,"score1":2,"score2":3,"score3":4,"score4":5},{"id":11,"roundId":11,"gameId":5,"score1":1,"score2":2,"score3":3,"score4":4},{"id":12,"roundId":12,"gameId":5,"score1":2,"score2":3,"score3":4,"score4":5},{"id":13,"roundId":13,"gameId":5,"score1":2,"score2":3,"score3":4,"score4":5},{"id":14,"roundId":14,"gameId":6,"score1":1,"score2":2,"score3":3,"score4":4},{"id":15,"roundId":15,"gameId":6,"score1":2,"score2":3,"score3":4,"score4":5},{"id":16,"roundId":16,"gameId":7,"score1":1,"score2":2,"score3":3,"score4":4},{"id":17,"roundId":17,"gameId":7,"score1":2,"score2":3,"score3":4,"score4":5},{"id":18,"roundId":18,"gameId":7,"score1":4,"score2":5,"score3":6,"score4":7},{"id":19,"roundId":19,"gameId":8,"score1":1,"score2":2,"score3":3,"score4":4},{"id":20,"roundId":20,"gameId":8,"score1":1,"score2":2,"score3":3,"score4":4},{"id":21,"roundId":21,"gameId":9,"score1":1,"score2":2,"score3":3,"score4":4},{"id":22,"roundId":22,"gameId":9,"score1":1,"score2":1,"score3":1,"score4":1},{"id":23,"roundId":23,"gameId":10,"score1":1,"score2":1,"score3":1,"score4":1},{"id":24,"roundId":24,"gameId":10,"score1":1,"score2":1,"score3":1,"score4":1},{"id":25,"roundId":25,"gameId":10,"score1":1,"score2":1,"score3":1,"score4":1}]
