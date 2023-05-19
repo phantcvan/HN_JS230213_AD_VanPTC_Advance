@@ -1,0 +1,68 @@
+[
+    {
+        "gameId": 1,
+        "roundId": 1,
+        "score": {
+            "player1": {
+                "name": "a",
+                "score": 0
+            },
+            "player2": {
+                "name": "b",
+                "score": 0
+            },
+            "player3": {
+                "name": "c",
+                "score": 0
+            },
+            "player4": {
+                "name": "d",
+                "score": 0
+            }
+        }
+    },
+    {
+        "gameId": 1,
+        "roundId": 2,
+        "score": {
+            "player1": {
+                "name": "a",
+                "score": 0
+            },
+            "player2": {
+                "name": "b",
+                "score": 0
+            },
+            "player3": {
+                "name": "c",
+                "score": 0
+            },
+            "player4": {
+                "name": "d",
+                "score": 0
+            }
+        }
+    },
+    {
+        "gameId": 1,
+        "roundId": 3,
+        "score": {
+            "player1": {
+                "name": "a",
+                "score": 0
+            },
+            "player2": {
+                "name": "b",
+                "score": 0
+            },
+            "player3": {
+                "name": "c",
+                "score": 0
+            },
+            "player4": {
+                "name": "d",
+                "score": 0
+            }
+        }
+    }
+]

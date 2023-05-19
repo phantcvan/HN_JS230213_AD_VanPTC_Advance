@@ -1,0 +1,86 @@
+body {
+    border: 0;
+    padding: 0;
+}
+
+.container{
+    margin: 0px 20px;
+    padding: 5px; 
+}
+
+.keepers{
+    width: 80%;
+}
+
+.wrap{
+    margin:10px 0px 200px 10px;
+    /* width: 80%; */
+    margin: 0 auto; 
+    display: block;
+    justify-content:flex-start; 
+    align-items: center;
+
+}
+
+.keeper{
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.input-player{
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    display: block;
+}
+.wrap-note{
+    margin:10px 0px 200px 10px;
+    /* width: 80%; */
+    margin: 0 auto; 
+    display: flex;
+    justify-content:flex-start; 
+    align-items: center;
+}
+.note{
+    background-color: #F5CED0;
+    border-radius: 5px;
+    padding: 10px 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    color: #b33f48;
+    font-weight: 550;
+}
+
+.btn{
+    background-color: #006EFC;
+    border-radius: 5px;
+    border:none;
+    padding:10px 10px;
+    color: white;
+    font-weight: 550;
+}
+table {
+    width: 80%;
+    /* border: 1px solid black; */
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+th, tr, td{
+    /* border: 1px solid black; */
+    padding: 5px;
+    text-align: center;
+}
+td {
+    height: 30px;
+    border-top: 1px solid gray;
+    width: 20%;
+}
+#sumScore{
+    background-color: #006EFC;
+    color:white;
+}
