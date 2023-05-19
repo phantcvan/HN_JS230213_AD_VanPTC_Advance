@@ -21,22 +21,27 @@ router.get("/", (req, res) => {
 router.post("/", (req, res) => {
   let { player1, player2, player3, player4 } = req.body;
 
-  let newPlayer = {
-    id: Math.floor(Math.random() * 10000000000000),
-    gameId: Math.floor(Math.random() * 10000000000000),
-    player1: player1,
-    player2: player2,
-    player3: player3,
-    player4: player4,
-  };
   try {
     let players = JSON.parse(fs.readFileSync("./database/players.json"));
-    let id=1;
+    let id = 1;
+    if(players.length>1) id=players[players.length-1].id+1;
+    let gameId = 1;
+    if(players.length>1) gameId=players[players.length-1].gameId+1;
+    
+    let newPlayer = {
+      id: id,
+      gameId: gameId,
+      player1: player1,
+      player2: player2,
+      player3: player3,
+      player4: player4,
+    };
+
 
     players.push(newPlayer);
     fs.writeFileSync("./database/players.json", JSON.stringify(players));
     res.json({
-      messages: "Create Player Successfully!",
+      messages: "Create Player Successfully",
     });
   } catch (error) {
     res.json({

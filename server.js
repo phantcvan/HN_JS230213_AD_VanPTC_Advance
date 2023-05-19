@@ -13,7 +13,7 @@ server.get("/", (req, res) => {
     res.sendFile(__dirname + "/public/index.html");
   });
   
-  server.get("/gameplay/:id", (req, res) => {
+  server.get("/round/:id", (req, res) => {
     res.sendFile(__dirname + "/public/round.html");
   });
   
