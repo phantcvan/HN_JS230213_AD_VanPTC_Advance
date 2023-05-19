@@ -2,12 +2,12 @@ const express = require("express");
 const router = express.Router();
 const fs = require("fs");
 
-module.exports = router;
 
-//Lay ve tat ca round
+
+//lấy dữ liệu game
 router.get("/", (req, res) => {
   try {
-    let rounds = JSON.parse(fs.readFileSync("./player-data/rounds.json"));
+    let rounds = JSON.parse(fs.readFileSync("./database/rounds.json"));
     res.json(rounds);
   } catch (error) {
     res.json({
@@ -20,7 +20,7 @@ router.get("/:id", (req, res) => {
   const { id } = req.params;
   console.log(id);
   try {
-    let rounds = JSON.parse(fs.readFileSync("./player-data/rounds.json"));
+    let rounds = JSON.parse(fs.readFileSync("./database/rounds.json"));
     const findGame = rounds.find((e) => e.gameId === +id);
     console.log(findGame);
     res.json(findGame);
@@ -52,9 +52,9 @@ router.post("/", (req, res) => {
     };
     console.log(newRound);
     try {
-      let rounds = JSON.parse(fs.readFileSync("./player-data/rounds.json"));
+      let rounds = JSON.parse(fs.readFileSync("./database/rounds.json"));
       rounds.push(newRound);
-      fs.writeFileSync("./player-data/rounds.json", JSON.stringify(rounds));
+      fs.writeFileSync("./database/rounds.json", JSON.stringify(rounds));
       res.json({
         messages: "Create Round Successfully!",
       });
@@ -65,3 +65,5 @@ router.post("/", (req, res) => {
     }
   }
 });
+
+module.exports = router;

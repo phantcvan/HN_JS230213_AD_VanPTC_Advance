@@ -1,11 +1,11 @@
 let listPlayers;
-fetch("http://127.0.0.1:8000/api/v1/player")
+fetch("api/v1/player")
   .then((res) => res.json())
   .then((data) => {
     listPlayers = data;
   })
   .catch((err) => console.log(err));
-let vld = document.getElementById("vld");
+let message = document.getElementById("message");
 let player1 = document.getElementById("player1");
 let player2 = document.getElementById("player2");
 let player3 = document.getElementById("player3");
@@ -19,15 +19,15 @@ let player4 = document.getElementById("player4");
       !player3.value ||
       !player4.value
     ) {
-      vld.style.display = "block";
+      message.style.display = "block";
     } else {
-      vld.style.display = "none";
+      message.style.display = "none";
     }
   });
 });
 function handleAddPlayer() {
   try {
-    fetch("http://127.0.0.1:8000/api/v1/player", {
+    fetch("api/v1/player", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -41,7 +41,7 @@ function handleAddPlayer() {
     })
       .then(() => {
         // Gọi lại API để lấy danh sách players mới nhất
-        return fetch("http://127.0.0.1:8000/api/v1/player");
+        return fetch("api/v1/player");
       })
       .then((res) => res.json())
       .then((data) => {
