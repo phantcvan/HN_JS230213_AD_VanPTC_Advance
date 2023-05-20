@@ -23,7 +23,7 @@ fetch("/api/v1/player")
 addButton.addEventListener("click", function () {
   count++;
   if (count > rowLimit) {
-    addButton.style.display = "none"; 
+    addButton.style.display = "none";
     return;
   }
 
@@ -89,8 +89,17 @@ addButton.addEventListener("click", function () {
   }
 
   function saveResult() {
+    const inputs = document.querySelectorAll("input[type='number']");
+
+    inputs.forEach((input) => {
+      // Chuyển nút input thành span-> người dùng không sửa kết quả được nữa
+      const span = document.createElement("span");
+      span.textContent = input.value;
+      input.parentNode.replaceChild(span, input);
+    });
+
+
     const scoresFinal = roundData.flat().slice(0, 4).map(input => Number(input.value));
-    console.log("SCORE-FINAL", scoresFinal);
     let total = playerScores.sumScore1 + playerScores.sumScore2 + playerScores.sumScore3 + playerScores.sumScore4 + scoresFinal.reduce((acc, cur) => acc + cur, 0);
     const result = `<tr class="sum" id="sumScore">
     <td>Sum of scores (${total})</td>
@@ -113,7 +122,6 @@ addButton.addEventListener("click", function () {
         score4: scoresFinal[3],
         gameId,
 
-
       }),
     }).then(response => {
       addButton.style.display = "none"; // Ẩn nút sau khi lưu thành công
@@ -130,18 +138,17 @@ addButton.addEventListener("click", function () {
 fetch(`/api/v1/rounds/${gameId}`)
   .then((res) => res.json())
   .then((data) => {
-    console.log("DATA", data);
     let sumScore1 = 0;
     let sumScore2 = 0;
     let sumScore3 = 0;
     let sumScore4 = 0;
-    let total=0
+    let total = 0
     for (let i = 0; i < data.length; i++) {
       sumScore1 += Number(data[i].score1);
       sumScore2 += Number(data[i].score2);
       sumScore3 += Number(data[i].score3);
       sumScore4 += Number(data[i].score4);
-      total+=Number(data[i].score1)+Number(data[i].score2)+Number(data[i].score3)+Number(data[i].score4)
+      total += Number(data[i].score1) + Number(data[i].score2) + Number(data[i].score3) + Number(data[i].score4)
     }
 
     const sum = `<tr class="sum" id="sumScore">

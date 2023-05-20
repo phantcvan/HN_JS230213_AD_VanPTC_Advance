@@ -19,11 +19,11 @@ router.get("/", (req, res) => {
 // Middleware validate player name
 const validate =(req,res,next)=>{
   let { player1, player2, player3, player4 } = req.body;
-if(!player1||!player2||!player3||player4) {
+if(!player1||!player2||!player3||!player4) {
   res.json({
     message: "Input blank"
 })
-} else{
+} else {
   next()
 }
 }
