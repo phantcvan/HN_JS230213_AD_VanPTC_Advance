@@ -39,6 +39,10 @@ addButton.addEventListener("click", function () {
     input.type = "number";
     scoreCell.appendChild(input);
     round.push(input);
+    input.addEventListener("input", function () {
+      round[i] = input;
+      console.log("INPUT",input);
+    });
   }
   roundData.unshift(round);
 
@@ -84,7 +88,7 @@ addButton.addEventListener("click", function () {
 
   if (count === 3) {
     addButton.removeEventListener("click", saveResult);
-    addButton.textContent = "Save";
+    addButton.textContent = "Save Result";
     addButton.addEventListener("click", saveResult);
   }
 
